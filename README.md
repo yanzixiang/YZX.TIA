@@ -1,8 +1,6 @@
-use TIA as an software platform
-将博图作为软件平台使用
-
 # 目的
 1.TIA 中有很多控件我想要将它们用到自己开发的软件中去，比如监控某一个流程图(graph)实例的状态，监控某一段梯型图(ladder)的状态，比如监控某一个变量表中的变量的当前值。
+
 2.给 TIA 添加一些我想要的功能。
 
 # Openness 和 OpennessScripter
