@@ -14,8 +14,9 @@ OpennessScripter 只是一个 Openness 的一种应用而已。Openness 只是�
 3. [Change the splash image](https://github.com/yanzixiang/YZX.TIA/wiki/Change-the-splash-image)</br>
    更换启动画面
 4. [Add some menu in the Portal view](https://github.com/yanzixiang/YZX.TIA/wiki/Add-some-menu-in-the-Portal-view)</br>
-  在Portal视图中添加菜单
+   在Portal视图中添加菜单
 5. [Add IronPython Console for controls in Wincc Design Editor](https://github.com/yanzixiang/YZX.TIA/wiki/Add-IronPython-Console-for-controls-in-Wincc-Design-Editor)</br>
-  在Wincc设计画面中为每个控件添加IronPython控制台
+   在Wincc设计画面中为每个控件添加IronPython控制台
 
-
+6. [Unpack mpk files](https://github.com/yanzixiang/YZX.TIA/tree/master/MpkExtractor)</br>
+   解包TIA专用配置文件MPK
