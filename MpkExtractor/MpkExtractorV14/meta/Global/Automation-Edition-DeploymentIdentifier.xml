@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<DeploymentIdentifier xmlns="http://www.siemens.com/automation/2004/04/commonservices/identifier">
+	<Edition pathAnchor="Portal V14" registryKey="TIAP14"/>
+	<DeploymentunitMainIdentifier name="Totally Integrated Automation Portal" registryKey="EditionMain" marketName="Siemens Totally Integrated Automation Portal V14">
+		<UnitVersion shortVersion="14.00"/>
+	</DeploymentunitMainIdentifier>
+</DeploymentIdentifier>

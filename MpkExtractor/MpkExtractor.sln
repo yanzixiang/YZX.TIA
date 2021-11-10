@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30803.129
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MpkExtractor", "MpkExtractor.csproj", "{558B0E17-E6B5-4FBE-B2E1-79E35ABA6062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens.Automation.Archiving.Test", "..\Siemens.Automation.Archiving.Test\Siemens.Automation.Archiving.Test.csproj", "{C4006C6D-449C-4F7F-AD05-73739EB01F5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens.Automation.Basics.Test", "..\Siemens.Automation.Basics.Test\Siemens.Automation.Basics.Test.csproj", "{27914246-1AE8-4BC0-9B43-3E65D7F52D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens.Automation.FileIO.Test", "..\Siemens.Automation.FileIO.Test\Siemens.Automation.FileIO.Test.csproj", "{33D7F895-17FB-4679-BCEA-0FBB2180A074}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{558B0E17-E6B5-4FBE-B2E1-79E35ABA6062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{558B0E17-E6B5-4FBE-B2E1-79E35ABA6062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{558B0E17-E6B5-4FBE-B2E1-79E35ABA6062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{558B0E17-E6B5-4FBE-B2E1-79E35ABA6062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4006C6D-449C-4F7F-AD05-73739EB01F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4006C6D-449C-4F7F-AD05-73739EB01F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4006C6D-449C-4F7F-AD05-73739EB01F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4006C6D-449C-4F7F-AD05-73739EB01F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27914246-1AE8-4BC0-9B43-3E65D7F52D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27914246-1AE8-4BC0-9B43-3E65D7F52D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27914246-1AE8-4BC0-9B43-3E65D7F52D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27914246-1AE8-4BC0-9B43-3E65D7F52D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D7F895-17FB-4679-BCEA-0FBB2180A074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D7F895-17FB-4679-BCEA-0FBB2180A074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D7F895-17FB-4679-BCEA-0FBB2180A074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D7F895-17FB-4679-BCEA-0FBB2180A074}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {591B51C9-C47F-4BCF-BCB0-074BD25FA631}
+	EndGlobalSection
+EndGlobal

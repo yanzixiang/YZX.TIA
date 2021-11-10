@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeploymentIdentifier xmlns="http://www.siemens.com/automation/2004/04/commonservices/identifier">
+  <DeploymentPathIdentifier name="LocalFileStrategy_InstallationSettings">
+    <PathPrefix mayCreatePath="No">
+      <InsertPath href="Automation-Global-DeploymentIdentifier.xml" from_xpath="//DeploymentPathIdentifier[@name='PE_Rel_RootProgPath']" />
+    </PathPrefix>
+    <RelativePathPart>
+      <InsertLiteral string="\Settings" />
+    </RelativePathPart>
+  </DeploymentPathIdentifier>
+  <DeploymentPathIdentifier name="LocalFileStrategy_UserSettings" user_readonly="No" mustExistAlready="No">
+    <PathPrefix mayCreatePath="Yes">
+      <InsertPath href="Automation-Global-DeploymentIdentifier.xml" from_xpath="//DeploymentPathIdentifier[@name='PersonalAppDataPath']" />
+    </PathPrefix>
+    <RelativePathPart>
+      <InsertLiteral string="\" />
+    </RelativePathPart>
+    <RelativePathPart>
+      <InsertConstantValue href="Automation-Edition-DeploymentIdentifier.xml" from_xpath="//Edition/@pathAnchor" />
+    </RelativePathPart>
+    <RelativePathPart>
+      <InsertLiteral string="\Settings" />
+    </RelativePathPart>
+  </DeploymentPathIdentifier>
+  <DeploymentPathIdentifier name="LocalFileStrategy_AllUsersSettings" user_readonly="No" mustExistAlready="No">
+    <PathPrefix mayCreatePath="Yes">
+      <InsertPath href="Automation-Global-DeploymentIdentifier.xml" from_xpath="//DeploymentPathIdentifier[@name='CommonAppDataPath']" />
+    </PathPrefix>
+    <RelativePathPart>
+      <InsertLiteral string="\" />
+    </RelativePathPart>
+    <RelativePathPart>
+      <InsertConstantValue href="Automation-Edition-DeploymentIdentifier.xml" from_xpath="//Edition/@pathAnchor" />
+    </RelativePathPart>
+    <RelativePathPart>
+      <InsertLiteral string="\Settings" />
+    </RelativePathPart>
+  </DeploymentPathIdentifier>
+  <DeploymentPathIdentifier name="LocalFileStrategy_CorporateSettings_Path" user_readonly="No" mustExistAlready="No">
+    <PathPrefix mayCreatePath="Yes">
+      <InsertPath href="Automation-Global-DeploymentIdentifier.xml" from_xpath="//DeploymentPathIdentifier[@name='CommonAppDataPath']" />
+    </PathPrefix>
+    <RelativePathPart>
+      <InsertLiteral string="\" />
+    </RelativePathPart>
+    <RelativePathPart>
+      <InsertConstantValue href="Automation-Edition-DeploymentIdentifier.xml" from_xpath="//Edition/@pathAnchor" />
+    </RelativePathPart>
+    <RelativePathPart>
+      <InsertLiteral string="\CorporateSettings" />
+    </RelativePathPart>
+  </DeploymentPathIdentifier>
+  <DeploymentPathIdentifier name="LocalFileStrategy_AllUserInstallation" user_readonly="No" mustExistAlready="No">
+    <PathPrefix mayCreatePath="Yes">
+      <InsertPath href="Automation-Global-DeploymentIdentifier.xml" from_xpath="//DeploymentPathIdentifier[@name='CommonAppDataPath']" />
+    </PathPrefix>
+    <RelativePathPart>
+      <InsertLiteral string="\" />
+    </RelativePathPart>
+    <RelativePathPart>
+      <InsertConstantValue href="Automation-Edition-DeploymentIdentifier.xml" from_xpath="//Edition/@pathAnchor" />
+    </RelativePathPart>
+  </DeploymentPathIdentifier>
+  <DeploymentPathIdentifier name="LocalFileStrategy_Bin">
+    <PathPrefix mayCreatePath="No">
+      <InsertPath href="Automation-Global-DeploymentIdentifier.xml" from_xpath="//DeploymentPathIdentifier[@name='PE_Rel_BinPath']" />
+    </PathPrefix>
+  </DeploymentPathIdentifier>
+  <DeploymentPathIdentifier name="LocalFileStrategy_Meta" user_readonly="Yes" mustExistAlready="Yes">
+    <PathPrefix mayCreatePath="No">
+      <InsertPath href="Automation-Global-DeploymentIdentifier.xml" from_xpath="//DeploymentPathIdentifier[@name='PE_Rel_MetaPath']" />
+    </PathPrefix>
+  </DeploymentPathIdentifier>
+  <DeploymentPathIdentifier name="LocalFileStrategy_Schema">
+    <PathPrefix mayCreatePath="No">
+      <InsertPath href="Automation-Global-DeploymentIdentifier.xml" from_xpath="//DeploymentPathIdentifier[@name='PE_Rel_RootProgPath']" />
+    </PathPrefix>
+    <RelativePathPart>
+      <InsertLiteral string="\Schema" />
+    </RelativePathPart>
+  </DeploymentPathIdentifier>
+</DeploymentIdentifier>

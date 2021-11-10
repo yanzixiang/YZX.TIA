@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeploymentIdentifier xmlns="http://www.siemens.com/automation/2004/04/commonservices/identifier">
+
+  <DeploymentPathIdentifier name="AutomationSubfolder" user_readonly="No" scope="machine">
+		<PathPrefix mayCreatePath="Yes">
+			<InsertLiteral string="\Siemens\Automation"/>
+		</PathPrefix>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="CommonAppDataPath" user_readonly="No" scope="machine">
+		<PathPrefix mayCreatePath="Yes">
+			<SHGetFolderPath id="0x0023" winAlias="CSIDL_COMMON_APPDATA"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Siemens\Automation"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="AutomationWinCommonPath" user_readonly="Yes" scope="machine">
+		<PathPrefix mayCreatePath="Yes">
+			<SHGetFolderPath id="0x002b" winAlias="CSIDL_PROGRAM_FILES_COMMON"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Siemens\Automation"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="AutomationProgramDefaultPath" scope="machine">
+		<PathPrefix mayCreatePath="Yes">
+			<SHGetFolderPath id="0x0026" winAlias="CSIDL_PROGRAM_FILES"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Siemens\Automation"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="WinCommonDocuments" scope="machine">
+		<PathPrefix mayCreatePath="No">
+			<SHGetFolderPath id="0x002e" winAlias="CSIDL_COMMON_DOCUMENTS"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Siemens\Automation"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="Win_PersonalUserPath" scope="user">
+		<PathPrefix mayCreatePath="No">
+      <InsertEnv variable="TiaDefaultProjectPath" />
+			<SHGetFolderPath id="0x005" winAlias="CSIDL_PERSONAL"/>
+		</PathPrefix>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="PersonalAppDataPath" scope="user" mustExistAlready="Yes">
+		<PathPrefix mayCreatePath="No">
+      <InsertEnv variable="TiaUserSettingsPath" />
+			<SHGetFolderPath id="0x001a" winAlias="CSIDL_APPDATA"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Siemens\Automation"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="PE_Rel_RootProgPath" user_readonly="Yes" mustExistAlready="Yes" scope="thisDeploymentunit">
+		<PathPrefix>
+			<InsertRelativeLiteral string="..\.."/>
+		</PathPrefix>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="PE_Rel_BinPath" user_readonly="Yes" mustExistAlready="Yes" scope="thisDeploymentunit">
+		<PathPrefix>
+			<InsertPath from_xpath="//DeploymentPathIdentifier[@name='PE_Rel_RootProgPath']"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Bin"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="PE_Rel_MetaPath" user_readonly="Yes" mustExistAlready="Yes" scope="thisDeploymentunit">
+		<PathPrefix>
+			<InsertPath from_xpath="//DeploymentPathIdentifier[@name='PE_Rel_RootProgPath']"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Meta"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="PE_Rel_SpecSysLibPath" user_readonly="Yes" mustExistAlready="Yes" scope="thisDeploymentunit">
+		<PathPrefix>
+			<InsertPath from_xpath="//DeploymentPathIdentifier[@name='PE_Rel_RootProgPath']"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Lib\Spec"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="PE_Rel_SysLibPath" user_readonly="Yes" mustExistAlready="Yes" scope="thisDeploymentunit">
+		<PathPrefix>
+			<InsertPath from_xpath="//DeploymentPathIdentifier[@name='PE_Rel_RootProgPath']"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Lib\Sys"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="SupportPackageStore_DefaultPath" user_readonly="No" mustExistAlready="Yes" scope="thisDeploymentunit">
+		<PathPrefix>
+			<InsertPath from_xpath="//DeploymentPathIdentifier[@name='CommonAppDataPath']"/>
+		</PathPrefix>
+		<RelativePathPart>
+			<InsertLiteral string="\Support Package Store"/>
+		</RelativePathPart>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="Win_ProgramFilesDefaultPath" scope="machine">
+		<PathPrefix mayCreatePath="Yes">
+			<SHGetFolderPath id="0x0026" winAlias="CSIDL_PROGRAM_FILES"/>
+		</PathPrefix>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="Win_SystemPath" scope="machine">
+		<PathPrefix mayCreatePath="No">
+			<SHGetFolderPath id="0x0025" winAlias="CSIDL_SYSTEM"/>
+		</PathPrefix>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="WinPath" scope="machine">
+		<PathPrefix mayCreatePath="No">
+			<SHGetFolderPath id="0x0024" winAlias="CSIDL_WINDOWS"/>
+		</PathPrefix>
+	</DeploymentPathIdentifier>
+	<DeploymentPathIdentifier name="Win_CommonTemplatesPath" scope="machine">
+		<PathPrefix mayCreatePath="No">
+			<SHGetFolderPath id="0x002d" winAlias="CSIDL_COMMON_TEMPLATES"/>
+		</PathPrefix>
+	</DeploymentPathIdentifier>
+</DeploymentIdentifier>
+ 
