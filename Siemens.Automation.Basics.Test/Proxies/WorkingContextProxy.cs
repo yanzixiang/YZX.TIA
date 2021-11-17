@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using Siemens.Automation.Basics;
+using Siemens.Automation.CommonTrace.TraceIntegrationDotNet;
 using Siemens.Simatic.Hmi.Utah.Common.Base.Reflection;
 
 namespace YZX.Tia.Proxies
@@ -52,6 +53,11 @@ namespace YZX.Tia.Proxies
           "m_PlatformServiceContainer",
           ReflectionWays.SystemReflection) as PlatformServiceContainer;
       }
+    }
+
+    public static ITrace GetTrace()
+    {
+      return Reflector.GetStaticFieldByName(typeof(WorkingContext),"s_MyTrace") as ITrace;
     }
   }
 }

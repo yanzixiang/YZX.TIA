@@ -4,7 +4,7 @@ using Siemens.Automation.Basics;
 
 namespace YZX.Tia.Dlc
 {
-  public static class DlcExtensions
+  public static partial class IWorkingContextExtensions
   {
     public static T GetOptionalDlc<T>(this IWorkingContext workingContext,
   string serviceId)
