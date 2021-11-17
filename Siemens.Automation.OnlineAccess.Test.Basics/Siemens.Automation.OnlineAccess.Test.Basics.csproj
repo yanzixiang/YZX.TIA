@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA9F75A9-7345-4D1C-90E9-F0FF33B75E59}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YZX.Tia</RootNamespace>
+    <AssemblyName>Siemens.Automation.OnlineAccess.Test.Basics</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TIA|AnyCPU'">
+    <OutputPath>bin\TIA\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OMSp_core_managed">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\OMSp_core_managed.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.Basics">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.Basics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.DomainServices.Interfaces">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.DomainServices.Online">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.Online.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.DomainServices.UI">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.ObjectFrame">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.ObjectFrame.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.OnlineAccess">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.OnlineAccess.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.OnlineAccess.OnlineInterface">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.OnlineAccess.OnlineInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.OnlineAccess.S7DosWrapper">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.OnlineAccess.S7DosWrapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.OnlineAccess.s7sddnet">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.OnlineAccess.s7sddnet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Hmi.Common">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Hmi.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Hwcn.Basics.Utilities">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Hwcn.Basics.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.SystemDiagnosis.Comm.OMSPlusService">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.SystemDiagnosis.Comm.OMSPlusService.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converter\OamConverters.cs" />
+    <Compile Include="Extensions\OnlineInterface\ConnectionExtensions.cs" />
+    <Compile Include="Extensions\OnlineInterface\IEthernetDiscoverNodeExtensions.cs" />
+    <Compile Include="Extensions\OnlineInterface\IOamLocalBoardExtensions.cs" />
+    <Compile Include="Extensions\OnlineInterface\IOMSConnectionExtensions.cs" />
+    <Compile Include="Extensions\OnlineInterface\OMSPlusConnectionServiceExtensions.cs" />
+    <Compile Include="Extensions\OnlineInterface\OnlineSessionExtensions.cs" />
+    <Compile Include="Proxies\OnlineInterface\DPSlaveConnectionProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\EthernetDiscoverConnectionProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamBlockCollectionProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamClientInfoEventArgsProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamComBoardProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamConnectionProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamCustomBoardProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamDeviceWatcherProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamEthernetConnectionsWatcherProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamInfoEventProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamLocalBoardBaseProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamLocalBoardProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamMessageManagerProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamNetworkProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamObjectCreatorProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamOnlineBlockDirectoryProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamPlcSimCtlProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamSimaticScannerProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamSinecRegistryAccessX64Proxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamUserProgramProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamVariableContainerProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OamVariableControlProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OMSConnectionProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\OmsNodeControlProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\PnioConnectionProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\S7DOSConnectionProxy.cs" />
+    <Compile Include="Proxies\OnlineInterface\SPS7ConnectionProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxies\S7JobProxy.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
