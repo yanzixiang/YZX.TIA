@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C85C9019-FAA3-49D3-967E-AD6C5D46DAAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YZX.Tia</RootNamespace>
+    <AssemblyName>Siemens.Automation.FrameApplication.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Siemens.Automation.Basics">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.Basics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.CommonServices">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.CommonServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.DomainServices.Interfaces">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.DomainServices.Online">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.Online.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.DomainServices.UI">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.FrameApplication">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.FrameApplication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.FrameApplication.Impl">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.FrameApplication.Impl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.ObjectFrame">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.ObjectFrame.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.ProjectManager">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.ProjectManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.UI.Controls">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.UI.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.UI.Controls.Grid">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.UI.Controls.Grid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.UserProjectManagement.BL">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.UserProjectManagement.BL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Hmi.Common">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Hmi.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Hwcn.IntItf">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Hwcn.IntItf.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Lang.BlockEditorFrame, Version=1400.100.1201.1, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Lang.BlockEditorFrame.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Lang.PLInterface, Version=1400.100.1201.1, Culture=neutral, PublicKeyToken=null">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\FrameApplication\FrameApplicationExtensions.Library.cs" />
+    <Compile Include="Extensions\FrameApplication\FrameApplicationExtensions.NavigationViews.cs" />
+    <Compile Include="Extensions\FrameApplication\FrameApplicationExtensions.ProjectManagment.cs" />
+    <Compile Include="Extensions\FrameApplication\FrameApplicationExtensions.ProjectNavigator.cs" />
+    <Compile Include="Extensions\FrameApplication\FrameApplicationExtensions.cs" />
+    <Compile Include="Extensions\FrameApplication\FrameLocatorExtensions.cs" />
+    <Compile Include="Extensions\FrameApplication\ViewLoaderExtensions.cs" />
+    <Compile Include="Extensions\FrameApplication\UiWorkingContextExtensions.cs" />
+    <Compile Include="Extensions\FrameApplication\WindowManagerExtensions.cs" />
+    <Compile Include="Extensions\FrameApplication\ViewManagerExtensions.cs" />
+    <Compile Include="Proxies\FrameApplication\BrowsableGridUtilitiesProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\EditorPageFrameProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\TaskCardServiceProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\WorkingContextAccessProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ApplicationFrameProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxies\FrameApplication\CommonProjectHandlingProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\DialogFrameMetaProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\EditorFrameGroupProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\EditorFrameProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\EditorMainFrameProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\FrameBaseMetaProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\FrameBaseProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\FrameGroupBaseProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\GlobalLibraryNavigationViewProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\HierarchyFrameMetaProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\HierarchyFrameProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\MenuServiceImplementationProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\MetaDataReaderProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\OpenProjectViewDlcProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\PrimaryProjectManagerProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\PrimaryProjectUiWorkingContextManagerProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ProjectNavigationViewProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ProjectNavigatorFrameProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ProjectNavigatorLoaderProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ProjectNavigatorStateManagerProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\RootCollectionHolderProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\RootObjectHostServiceProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\SlidingManagerProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\StatusBarProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ViewFrameProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ViewManagerProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ViewMetaReaderProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\ViewServiceDataProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\WindowManagerProxy.cs" />
+    <Compile Include="Proxies\FrameApplication\WindowManagerProxy.Events.cs" />
+    <Compile Include="Proxies\FrameApplication\WindowManagerProxy.Frames.cs" />
+    <Compile Include="TiaStarter\TiaStarter.BlockEditor.cs" />
+    <Compile Include="TiaStarter\TiaStarter.Context.cs" />
+    <Compile Include="TiaStarter\TiaStarter.cs" />
+    <Compile Include="TiaStarter\TiaStarter.DiagOnlineObjectService.cs" />
+    <Compile Include="TiaStarter\TiaStarter.FormInvoke.cs" />
+    <Compile Include="TiaStarter\TiaStarter.ProjectManager.cs" />
+    <Compile Include="TiaStarter\TiaStarter.Sychronizer.cs" />
+    <Compile Include="TiaStarter\TiaStarter.CommandProcessor.cs" />
+    <Compile Include="TiaStarter\TiaStarter.GoOnlineCommands.cs" />
+    <Compile Include="TiaStarter\TiaStarter.JobbasedSynchronizeInvoke.cs" />
+    <Compile Include="TiaStarter\TiaStarter.LegitimationService.cs" />
+    <Compile Include="TiaStarter\TiaStarter.LifelistService.cs" />
+    <Compile Include="TiaStarter\TiaStarter.OnlineCommandInvoke.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Siemens.Automation.Basics.Test\Siemens.Automation.Basics.Test.csproj">
+      <Project>{27914246-1ae8-4bc0-9b43-3e65d7f52d22}</Project>
+      <Name>Siemens.Automation.Basics.Test</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Siemens.Automation.CommonServices.ProjectManager.Test\Siemens.Automation.CommonServices.ProjectManager.Test.csproj">
+      <Project>{3de1b2b5-1b59-4794-9a13-b04948fb967a}</Project>
+      <Name>Siemens.Automation.CommonServices.ProjectManager.Test</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Siemens.Simatic.Lang.NetworkEditorFrame.Test\Siemens.Simatic.Lang.NetworkEditorFrame.Test.csproj">
+      <Project>{4f95babf-ebe2-45ee-a7c8-82ec56138bb2}</Project>
+      <Name>Siemens.Simatic.Lang.NetworkEditorFrame.Test</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
