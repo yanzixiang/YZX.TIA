@@ -250,9 +250,8 @@
     private System.Windows.Forms.Button CloseProjectButton;
     private System.Windows.Forms.Button ExitButton;
     private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button SaveMpkButton;
-        private System.Windows.Forms.Button AddFileButton;
-    }
+    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button SaveMpkButton;
+    private System.Windows.Forms.Button AddFileButton;
+  }
 }
-

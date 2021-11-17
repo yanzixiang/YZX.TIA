@@ -44,6 +44,9 @@
       <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.CommonServices.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Siemens.Automation.CommonTrace.IntegrationDotNet">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.CommonTrace.IntegrationDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="Siemens.Automation.DomainServices">
       <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.dll</HintPath>
     </Reference>
@@ -143,10 +146,12 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dlc\DlcManagerExtensions.cs" />
     <Compile Include="Dlc\IWorkingContextExtensions.BlockEditor.cs" />
     <Compile Include="Dlc\IWorkingContextExtensions.CommandProcessor.cs" />
     <Compile Include="Dlc\IWorkingContextExtensions.CoreContext.cs" />
     <Compile Include="Dlc\IWorkingContextExtensions.cs" />
+    <Compile Include="Dlc\IWorkingContextExtensions.DlcContainer.cs" />
     <Compile Include="Dlc\IWorkingContextExtensions.Dlc.cs" />
     <Compile Include="Dlc\IWorkingContextExtensions.LibraryService.cs" />
     <Compile Include="Dlc\IWorkingContextExtensions.Lifelist.cs" />
@@ -163,6 +168,8 @@
     <Compile Include="Extensions\ObjectFrame\ICoreObjectExtensions.Sync.cs" />
     <Compile Include="Extensions\ObjectFrame\ICoreObjectExtensions.WorkingContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxies\AssemblyFinderProxy.cs" />
+    <Compile Include="Proxies\Dlc\DlcLifetimeManagerProxy.cs" />
     <Compile Include="Proxies\Dlc\DlcMetaInfoRepositoryProxy.cs" />
     <Compile Include="Proxies\Dlc\DlcObserverProxy.cs" />
     <Compile Include="Proxies\Archiving\PackagingImplementationBaseProxy.cs" />

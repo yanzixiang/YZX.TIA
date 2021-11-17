@@ -38,11 +38,29 @@ namespace MpkExtractor
     {
       log.Info(string.Format("加载Dlc成功"));
       log.Info(string.Format("程序加载成功"));
+      LoadExclusionList();
+    }
+
+    const string ExclusionListFile = "MpkExtractorExclusionList.json";
+    private void LoadExclusionList()
+    {
+      try
+      {
+        var s = File.ReadAllText(ExclusionListFile);
+        ExclusionList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(s);
+        log.Info(string.Format("排除列表加载成功"));
+      }
+      catch(Exception e)
+      {
+        log.Info(string.Format("排除列表加载失败"));
+      }
     }
 
     PackagingImplementationBaseProxy proxy;
     IList<string> FileNames;
     string FilePath;
+    string LastDirectory;
+    List<string> ExclusionList;
 
 
     IFileService FileService = 
@@ -53,7 +71,11 @@ namespace MpkExtractor
     {
       using (var openFileDialog = new OpenFileDialog())
       {
-        openFileDialog.InitialDirectory = "c:\\";
+        if(LastDirectory == null)
+        {
+          LastDirectory = "c:\\";
+        }
+        openFileDialog.InitialDirectory = LastDirectory;
         openFileDialog.Filter = "TIA 配置文件包(*.mpk)|*.mpk";
         openFileDialog.FilterIndex = 2;
         openFileDialog.RestoreDirectory = true;
@@ -73,6 +95,7 @@ namespace MpkExtractor
             log.Info(file);
           }
           log.Info(string.Format("{0}打开完成", FilePath));
+          LastDirectory = Path.GetDirectoryName(FilePath);
         }
       }
     }
@@ -80,15 +103,16 @@ namespace MpkExtractor
     private void ExportButton_Click(object sender, EventArgs e)
     {
       var folderBrowserDialog1 = new FolderBrowserDialog();
-      folderBrowserDialog1.SelectedPath = Path.GetDirectoryName(FilePath);
+      folderBrowserDialog1.SelectedPath = LastDirectory;
       folderBrowserDialog1.ShowNewFolderButton = true;
 
       var result = folderBrowserDialog1.ShowDialog();
       if (result == DialogResult.OK)
       {
         var SaveDirectory = folderBrowserDialog1.SelectedPath;
+        LastDirectory = Path.GetDirectoryName(SaveDirectory);
 
-        proxy.Unpack(SaveDirectory);
+        proxy.Unpack(SaveDirectory,ExclusionList);
 
         log.Info(string.Format("{0}导出完成",FilePath));
       }
@@ -96,13 +120,17 @@ namespace MpkExtractor
 
     private void CloseMpk()
     {
-      proxy.Dispose();
-      proxy = null;
-      if (FileNames != null)
+      if (proxy != null)
       {
-        FileNames = null;
+        proxy.Dispose();
+        proxy = null;
+        if (FileNames != null)
+        {
+          FileNames = null;
+        }
+        log.Info(string.Format("{0}关闭完成", FilePath));
+        LastDirectory = Path.GetDirectoryName(FilePath);
       }
-      log.Info(string.Format("{0}关闭完成", FilePath));
     }
 
     private void CloseProjectButton_Click(object sender, EventArgs e)

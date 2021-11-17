@@ -100,14 +100,36 @@ namespace YZX.Tia.Proxies.Archiving
         ) as UtilityStream;
     }
 
-    public void Unpack(string SaveDirectory = "")
+    public bool InExclusionList(
+      string filename,
+      List<string> ExclusionList = null)
+    {
+      if(ExclusionList == null)
+      {
+        return false;
+      }
+
+      string name = Path.GetFileNameWithoutExtension(filename);
+
+      foreach(var Exclusion in ExclusionList)
+      {
+        if (name.EndsWith(Exclusion))
+        {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    public void Unpack(
+      string SaveDirectory = "",
+      List<string> ExclusionList = null )
     {
       var  fileinfos = GetFilesWithFileInfo();
       var filesNames = GetFiles();
       var files = ZipExtractor.GetFiles();
       foreach(var f in filesNames)
       {
-        Console.WriteLine(f);
         var fileinfo = fileinfos[f];
         var us = OpenStreamReferencePackageWithPosition(f, fileinfo);
         string path;
@@ -119,10 +141,20 @@ namespace YZX.Tia.Proxies.Archiving
         {
           path = Path.Combine(SaveDirectory, f);
         }
-        StreamWriter sw = new StreamWriter(path);
-        us.CopyTo(sw.BaseStream);
-        sw.Flush();
-        sw.Close();
+
+        var Excluded = InExclusionList(f, ExclusionList);
+        if (Excluded)
+        {
+          Console.WriteLine("{0} InExclusionList",f);
+        }
+        else
+        {
+          Console.WriteLine(f);
+          StreamWriter sw = new StreamWriter(path);
+          us.CopyTo(sw.BaseStream);
+          sw.Flush();
+          sw.Close();
+        }
       }
     }
 
