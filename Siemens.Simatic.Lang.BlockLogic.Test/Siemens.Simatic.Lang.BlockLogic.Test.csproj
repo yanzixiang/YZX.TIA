@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23D79225-7E7C-4134-8BD3-3355927E1707}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YZX.Tia</RootNamespace>
+    <AssemblyName>Siemens.Simatic.Lang.BlockLogic.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TIA|AnyCPU'">
+    <OutputPath>bin\TIA\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OMSp_core_managed">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\OMSp_core_managed.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.Basics">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.Basics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.DomainServices.Interfaces">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.DomainServices.Online">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.DomainServices.Online.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.FrameApplication">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.FrameApplication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.ObjectFrame">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.ObjectFrame.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.ObjectFrame.Meta">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.ObjectFrame.Meta.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.OnlineAccess.OnlineInterface">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.OnlineAccess.OnlineInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Automation.UI.Controls">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Automation.UI.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Hmi.Common">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Hmi.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Lang.BlockEditorFrame">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Lang.BlockEditorFrame.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Lang.BlockLogic">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Lang.BlockLogic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Lang.Model">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Lang.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Lang.PLInterface">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Lang.PLInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Siemens.Simatic.Lang.PLInternal">
+      <HintPath>D:\Program Files\Siemens\Automation\Portal V14\Bin\Siemens.Simatic.Lang.PLInternal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\BlockLogic\ClientSessionExtensions.cs" />
+    <Compile Include="Extensions\BlockLogic\ICoreObjectExtensions.cs" />
+    <Compile Include="Extensions\BlockLogic\ICodeBlockExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxies\BlockLogic\DebugDeviceProxy.cs" />
+    <Compile Include="Proxies\BlockLogic\DebugServiceProxy.cs" />
+    <Compile Include="Proxies\BlockLogic\ICoreObjectExtensionProxy.cs" />
+    <Compile Include="Proxies\BlockLogic\OMSpFactoryProxy.cs" />
+    <Compile Include="Proxies\BlockLogic\OmsPlusBlockUtilitiesProxy.cs" />
+    <Compile Include="Proxies\BlockLogic\OnlinePlusReadThroughCacheProxy.cs" />
+    <Compile Include="Proxies\BlockLogic\PlusBlockConsistencyServiceProxy.cs" />
+    <Compile Include="Proxies\BlockLogic\QueryBasedControllerTargetLookupProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Siemens.Automation.DomainServices.Online.Test\Siemens.Automation.DomainServices.Online.Test.csproj">
+      <Project>{3c1a140a-5ac9-4d1e-a2b4-0e84e5c572d6}</Project>
+      <Name>Siemens.Automation.DomainServices.Online.Test</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
