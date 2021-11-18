@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens.Automation.CommonSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens.Automation.CommonTrace.IntegrationDotNet.Test", "..\Siemens.Automation.CommonTrace.IntegrationDotNet.Test\Siemens.Automation.CommonTrace.IntegrationDotNet.Test.csproj", "{CB000984-EA04-4BA8-84BB-58BFCA62FA91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siemens.Simatic.Hwcn.Diagnostic", "..\Siemens.Simatic.Hwcn.Diagnostic\Siemens.Simatic.Hwcn.Diagnostic.csproj", "{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -211,6 +213,20 @@ Global
 		{CB000984-EA04-4BA8-84BB-58BFCA62FA91}.TIA|Any CPU.Build.0 = Debug|Any CPU
 		{CB000984-EA04-4BA8-84BB-58BFCA62FA91}.TIA|x64.ActiveCfg = Debug|Any CPU
 		{CB000984-EA04-4BA8-84BB-58BFCA62FA91}.TIA|x64.Build.0 = Debug|Any CPU
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Debug|x64.ActiveCfg = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Debug|x64.Build.0 = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Release|Any CPU.ActiveCfg = Release|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Release|x64.ActiveCfg = Release|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Release|x64.Build.0 = Release|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Self|Any CPU.ActiveCfg = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Self|Any CPU.Build.0 = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Self|x64.ActiveCfg = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.Self|x64.Build.0 = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.TIA|Any CPU.ActiveCfg = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.TIA|Any CPU.Build.0 = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.TIA|x64.ActiveCfg = Debug|x64
+		{2EA8AA62-E792-4354-A08A-BDDE6ECFD7A1}.TIA|x64.Build.0 = Debug|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
