@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Diagnostics;
 using Console = Colorful.Console;
 
 using Siemens.Automation.Basics;
@@ -20,6 +21,8 @@ using YZX.Tia.Extensions.ProjectManager;
 using YZX.Tia.Proxies.ProjectManager;
 using YZX.Tia.Extensions.Diagnostic;
 using YZX.Tia.Dlc;
+using OpenTelemetry;
+using OpenTelemetry.Trace;
 
 namespace ShowModuleState
 {
@@ -171,7 +174,16 @@ namespace ShowModuleState
       Resize += Form1_Resize;
     }
 
-    public void TestTraceManager()
+    private static readonly ActivitySource MyActivitySource = new ActivitySource(
+        "MyCompany.MyProduct.MyLibrary");
+
+    OpenTelemetry.Trace.TracerProvider tracerProvider = Sdk.CreateTracerProviderBuilder()
+      .SetSampler(new AlwaysOnSampler())
+      .AddSource("MyCompany.MyProduct.MyLibrary")
+      .AddConsoleExporter()
+      .Build();
+
+  public void TestTraceManager()
     {
       var trace = TraceManagerExtensions.GetTrace("Siemens.Automation.TraceIntegrationDotNet", 
         "Siemens.Automation.CommonTrace.TraceIntegrationDotNet.TraceManager");
@@ -179,6 +191,7 @@ namespace ShowModuleState
       trace.InformationMessageSent += Trace_InformationMessageSent;
       trace.WarningMessageSent += Trace_WarningMessageSent;
       trace.ErrorMessageSent += Trace_ErrorMessageSent;
+
     }
 
     private void Trace_ErrorMessageSent(object sender, TraceEventArgs e)
@@ -186,8 +199,13 @@ namespace ShowModuleState
       try
       {
         Console.WriteLine(string.Format("{0} Error", e.ClassName), Color.Red);
-        Console.WriteLine(e, Color.Red);
-      }catch(Exception ex)
+        //Console.WriteLine(e, Color.Red);
+        using (var activity = MyActivitySource.StartActivity("SayHello"))
+        {
+          activity.SetTag("e", e);
+        }
+      }
+      catch(Exception ex)
       {
 
       }
@@ -198,8 +216,13 @@ namespace ShowModuleState
       try
       {
         Console.WriteLine(string.Format("{0} Warning", e.ClassName), Color.Yellow);
-        Console.WriteLine(e, Color.Yellow);
-      }catch(Exception ex)
+        //Console.WriteLine(e, Color.Yellow);
+        using (var activity = MyActivitySource.StartActivity("SayHello"))
+        {
+          activity.SetTag("e", e);
+        }
+      }
+      catch(Exception ex)
       {
 
       }
@@ -210,7 +233,13 @@ namespace ShowModuleState
       try
       {
         Console.WriteLine(string.Format("{0} Information", e.ClassName), Color.Green);
-        Console.WriteLine(e, Color.Green);
+        //Console.WriteLine(e, Color.Green);
+
+        using (var activity = MyActivitySource.StartActivity("SayHello"))
+        {
+          activity.SetTag("e", e);
+        }
+
         if (e.MethodName == "#### DlcManager #####: DlcCreated")
         {
           Console.WriteLine(e, Color.Gold);
@@ -223,8 +252,13 @@ namespace ShowModuleState
       try
       {
         Console.WriteLine(string.Format("{0} Debug",e.ClassName));
-        Console.WriteLine(e);
-      }catch(Exception ex)
+        //Console.WriteLine(e);
+        using (var activity = MyActivitySource.StartActivity("SayHello"))
+        {
+          activity.SetTag("e", e);
+        }
+      }
+      catch(Exception ex)
       {
 
       }
